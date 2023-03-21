@@ -1,0 +1,150 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* UTILITIES */
+.tracker_subtitle{
+  position: relative;
+  font-weight: 500;
+  margin: 2rem 0;
+  text-align: left;
+}
+.tracker_subtitle::after{
+  position: absolute;
+  content: "";
+  border-bottom: 1px solid gray;
+  display: block;
+  top: -0.2rem;
+  height: 30px;
+  width: 100%;
+}
+/* tracker container styling */
+.tracker {
+  box-shadow: 0 2px 5px gray;
+  width: 300px;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+/* header component styling */
+.header{
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+/* Add new expense component styling */
+.add_new_expense label{
+  display: block;
+  margin: 1rem 0;
+}
+.add_new_expense small{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.add_new_expense input{
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+.add_new_expense input:focus{
+  outline: none;
+}
+/* add expense button */
+.add_new_expense_btn button{
+  background-color: rgb(22, 124, 165);
+  color: #fff;
+  border: none;
+  display: block;
+  margin: 2rem auto;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+.add_new_expense_btn button:hover{
+  opacity: 0.75;
+}
+/* expense component styling */
+.expense{
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+.expense .credit > h3{
+  color: rgb(22, 124, 165);
+  font-weight: 200;
+}
+.expense .credit{
+  position: relative;
+}
+.expense .credit::after{
+  content: "";
+  position: absolute;
+  border: 1px solid gray;
+  display: block;
+  height: 80%;
+  top: 5px;
+  left: 100px;
+}
+.expense .debit > h3{
+  color: rgb(235, 86, 86);
+  font-weight: 200;
+}
+/* expense_history component */
+.history_container h3{
+  margin-bottom: 2rem;
+}
+.expense_history_list li{
+  background-color: #fff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.minus{
+  border-left: 4px solid red;
+}
+.plus {
+  border-left: 4px solid green;
+}
+.delBtn{
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 0.1rem 0.2rem;
+  transition: all 0.5s ease-in-out;
+}
+.delBtn:hover{
+  opacity: 0.5;
+}
+/* balance component styling */
+.balance h3 {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 764px){
+  .tracker {
+      width: 500px;
+      max-width: 90%;
+      padding: 3rem;
+    }
+    .expense .credit::after {
+      content: "";
+      position: absolute;
+      border: 1px solid gray;
+      display: block;
+      height: 80%;
+      top: 5px;
+      left: 170px;
+      }
+}
